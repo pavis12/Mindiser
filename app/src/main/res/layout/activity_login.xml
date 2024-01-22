@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_login_head"
+            android:text="Welcome Back!"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_login_email"
+            android:layout_marginTop="50dp"
+            android:padding="6dp"
+            android:layout_below="@+id/textView_login_head"
+            android:text="Email*"
+            android:textColor="#555555"
+            android:textSize="16sp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/editText_login_email"
+            android:hint="Enter email"
+            android:inputType="textEmailAddress"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/textView_login_email"
+            android:background="@drawable/border"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_login_pwd"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/textView_login_email"
+            android:text="Password*"
+            android:padding="6dp"
+            android:textColor="#555555"
+            android:textSize="16sp"/>
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="48dp"
+            android:id="@+id/imageView_show_hide_pwd"
+            android:layout_below="@id/textView_login_pwd"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/editText_login_pwd"
+            android:layout_below="@+id/textView_login_pwd"
+            android:hint="Enter password"
+            android:inputType="textPassword"
+            android:layout_marginStart="30dp"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:background="@drawable/border"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:id="@+id/button_login"
+            android:layout_below="@+id/editText_login_pwd"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:id="@+id/button_forgotPassowrd"
+            android:layout_below="@+id/button_login"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"/>
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleLarge"
+            android:id="@+id/progressBarLogin"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:elevation="10dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</ScrollView>
