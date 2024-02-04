@@ -6,10 +6,86 @@
     tools:context=".AnalyticsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="analytics"
-        android:layout_gravity="center"/>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="170dp"
+        android:id="@+id/chart_relative_layout"
+        android:background="@color/lime"
+        >
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+             />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:text="Last 30 days "
+            android:textColor="@color/grey"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="427dp"
+        android:background="@color/lime"
+        >
+
+        <ImageView
+            android:id="@+id/daily_analytics_awesome"
+            android:layout_width="69dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/awesome" />
+
+        <ImageView
+            android:id="@+id/daily_analytics_good"
+            android:layout_width="57dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/good" />
+
+        <ImageView
+            android:id="@+id/daily_analytics_okay"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/okay" />
+
+        <ImageView
+            android:id="@+id/daily_analytics_bad"
+            android:layout_width="62dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/bad" />
+
+        <ImageView
+            android:id="@+id/daily_analytics_terrible"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/terrible" />
+
+
+    </LinearLayout>
+
 
 </FrameLayout>

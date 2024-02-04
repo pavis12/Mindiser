@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/yellow"
     tools:context=".Login">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,7 +17,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView_login_head"
             android:text="Welcome Back!"
+            android:textStyle="bold"
+            android:textSize="40sp"
             android:textAlignment="center"
+            android:fontFamily="@font/lemon"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
 
         <TextView
@@ -29,6 +33,12 @@
             android:text="Email*"
             android:textColor="#555555"
             android:textSize="16sp"/>
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="48dp"
+            android:id="@+id/imageView_email_login"
+            android:layout_below="@id/textView_login_email"
+            android:src="@drawable/ic_email"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -37,6 +47,7 @@
             android:inputType="textEmailAddress"
             android:padding="6dp"
             android:textSize="16sp"
+            android:layout_marginStart="35dp"
             android:layout_below="@+id/textView_login_email"
             android:background="@drawable/border"/>
         <TextView
@@ -53,7 +64,8 @@
             android:layout_width="32dp"
             android:layout_height="48dp"
             android:id="@+id/imageView_show_hide_pwd"
-            android:layout_below="@id/textView_login_pwd"/>
+            android:layout_below="@id/textView_login_pwd"
+            android:src="@drawable/ic_hide_pwd"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -61,7 +73,7 @@
             android:layout_below="@+id/textView_login_pwd"
             android:hint="Enter password"
             android:inputType="textPassword"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="35dp"
             android:padding="6dp"
             android:textSize="16sp"
             android:background="@drawable/border"/>
@@ -72,19 +84,36 @@
             android:layout_height="wrap_content"
             android:text="Login"
             android:id="@+id/button_login"
-            android:layout_below="@+id/editText_login_pwd"
-            android:layout_marginTop="50dp"
+            android:layout_below="@+id/button_forgotPassowrd"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="70dp"
             android:layout_marginLeft="70dp"/>
-        <Button
+
+        <TextView
+            android:id="@+id/button_forgotPassowrd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_login_pwd"
+android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="120dp"
             android:text="Forgot Password?"
-            android:id="@+id/button_forgotPassowrd"
-            android:layout_below="@+id/button_login"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="70dp"
-            android:layout_marginLeft="70dp"/>
+            android:textSize="15sp"/>
+
+
+        <TextView
+            android:id="@+id/noaccount"
+
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_login"
+
+
+
+            android:text="Don't have an account?"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
         <ProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

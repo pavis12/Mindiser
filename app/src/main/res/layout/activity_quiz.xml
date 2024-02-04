@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8BD68E">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/progressIndicatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#8BD68E"
+
+        android:layout_alignParentTop="true"
+
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Add circles for each question -->
+        <View
+            android:id="@+id/circle1"
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/circle_boundry" />
+
+        <!-- Add more circles as needed for additional questions -->
+        <!-- <View
+            android:id="@+id/circle2"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/circle_background" />
+
+        <View
+            android:id="@+id/circle3"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/circle_background" />
+
+        ... -->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
+
+    <RadioGroup
+        android:id="@+id/optionsRadioGroup"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionTextView"
+
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="130dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/option1RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Option 1"
+            android:textColor="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/option2RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Option 2"
+            android:textColor="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/option3RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Option 3"
+            android:textColor="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/option4RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Option 4"
+            android:textColor="@android:color/white" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/optionsRadioGroup"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="152dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="Next"
+        android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -43,6 +43,8 @@ public class Register extends AppCompatActivity {
     private RadioButton radioButtonRegisterGenderselected;
     private DatePickerDialog picker;
     private static  final String TAG="RegisterActivity";
+    private int awesome,good,okay,bad,terrible;
+    private String last_login="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,14 +154,19 @@ public class Register extends AppCompatActivity {
                 } else {
                     textGender = radioButtonRegisterGenderselected.getText().toString();
                     progressBar.setVisibility(View.VISIBLE);
-                    registerUser(textFullName, textEmail, textdob, textGender, textMobile, textPwd);
+                    awesome=0;
+                    good=0;
+                    okay=0;
+                    bad=0;
+                    terrible=0;
+                    registerUser(textFullName, textEmail, textdob, textGender, textMobile, last_login,textPwd,awesome,good,okay,bad,terrible);
                 }
             }
 
 
         });
     }
-    private void registerUser(String textFullName, String textEmail, String textdob, String textGender, String textMobile, String textPwd) {
+    private void registerUser(String textFullName, String textEmail, String textdob, String textGender, String textMobile, String last_login,String textPwd,int awesome,int good,int okay,int bad,int terrible) {
         FirebaseAuth auth=FirebaseAuth.getInstance();
         //create user profile
         auth.createUserWithEmailAndPassword(textEmail,textPwd).addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
@@ -175,7 +182,7 @@ public class Register extends AppCompatActivity {
                         UserProfileChangeRequest profileChangeRequest=new UserProfileChangeRequest.Builder().setDisplayName(textFullName).build();
                         firebaseUser.updateProfile(profileChangeRequest);
                         // enter user data into firebase database
-                        ReadWriteUserDetails writeUserDetails=new ReadWriteUserDetails(textFullName,textdob,textGender,textMobile);
+                        ReadWriteUserDetails writeUserDetails=new ReadWriteUserDetails(textFullName,textdob,textGender,textMobile,last_login,awesome,good,okay,bad,terrible);
                         //extracting user reference from db for "Registered user"
                         DatabaseReference referenceprofile= firebaseDatabase.getReference("Registered Users");
                        referenceprofile.child(firebaseUser.getUid()).setValue(writeUserDetails).addOnCompleteListener(new OnCompleteListener<Void>() {

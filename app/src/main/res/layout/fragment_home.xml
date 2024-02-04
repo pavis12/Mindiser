@@ -3,15 +3,237 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/TextView_Welcome"
-        android:text="Home"
-        android:layout_gravity="center"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+            <!--<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+                <ImageView
+                    android:id="@+id/back_pressed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="15dp"
+                    android:src="@drawable/general_back_icon" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="15dp"
+                    android:src="@drawable/general_search_icon" />
+
+            </RelativeLayout>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/TextView_Welcome"
+                android:textSize="30sp"
+                android:fontFamily="@font/lemon"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/blue">
+
+                <TextView
+                    android:id="@+id/daily_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="Daily Screening"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/croissant_one"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginTop="57dp"
+                    android:id="@+id/daily_screening_relative_layout"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="  How are you today ?"
+                        android:textSize="30dp"
+                        android:id="@+id/how_today"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/how_today"
+                        android:text="   Tap to record your mood"
+                        android:textColor="@color/grey"
+                        android:textSize="20dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/how_today"
+                        android:padding="5dp"
+                        android:id="@+id/daily_screening_linear_layout"
+                        >
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="65dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/awesome"
+                            android:id="@+id/daily_awesome"/>
+
+                        <ImageView
+                            android:layout_width="61dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="7dp"
+                            android:src="@drawable/good"
+                            android:id="@+id/daily_good"/>
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="63dp"
+                            android:layout_marginTop="7dp"
+                            android:src="@drawable/okay"
+                            android:id="@+id/daily_okay"/>
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="7dp"
+                            android:src="@drawable/bad"
+                            android:id="@+id/daily_bad"/>
+
+                        <ImageView
+                            android:layout_width="58dp"
+                            android:layout_height="59dp"
+                            android:layout_marginTop="7dp"
+                            android:src="@drawable/terrible"
+                            android:id="@+id/daily_terrible"/>
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginTop="57dp"
+                    android:id="@+id/dailyScreening_check_analytics"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:paddingLeft="15dp"
+                        android:text="You have Completed today's Daily Screening!!! See yoy back tommorow"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/annie_use_your_telescope"
+                        android:textSize="25dp"
+                        android:id="@+id/text_completed"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:paddingLeft="15dp"
+                        android:text="Check your mood track in Analytics section"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/annie_use_your_telescope"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/text_completed"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/round_bk2"
+                android:layout_margin="20dp">
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Screening tools"
+                android:textSize="30sp" android:fontFamily="@font/croissant_one"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                android:padding="15dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EXPAND ALL"
+                    android:background="#00000000"
+                    android:padding="20dp"
+                    android:id="@+id/screening_tool"
+                    android:textColor="@color/black"
+                    android:layout_alignParentBottom="true"/>
+
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="108dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="40dp"
+
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/screening" />
+            </RelativeLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#00000000"
+
+                android:layout_margin="20dp"
+                app:cardElevation="8dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/redbg">
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"/>
+                        <!--android:src="@drawable/categories_restaurant_icon"-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Activities"
+                        android:textSize="30sp"
+
+                        android:textColor="@color/black"
+                        android:layout_alignParentRight="true"
+                        android:padding="25dp"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EXPAND ALL"
+                        android:layout_alignParentRight="true"
+
+                        android:background="#00000000"
+                        android:padding="20dp"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
 
 </FrameLayout>

@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -41,7 +42,16 @@ public class Login extends AppCompatActivity {
         editTextLoginpwd=findViewById(R.id.editText_login_pwd);
         progressBar=findViewById(R.id.progressBarLogin);
         authProfile=FirebaseAuth.getInstance();
-        Button buttonforgotpassword=findViewById(R.id.button_forgotPassowrd);
+        TextView buttonforgotpassword=findViewById(R.id.button_forgotPassowrd);
+        TextView noaccount=findViewById(R.id.noaccount);
+        noaccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Login.this,Register.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         //reset password
         buttonforgotpassword.setOnClickListener(new View.OnClickListener() {
             @Override

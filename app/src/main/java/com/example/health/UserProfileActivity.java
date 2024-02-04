@@ -32,6 +32,7 @@ public class UserProfileActivity extends AppCompatActivity {
     //ViewPager2 viewPager2;
     //ViewPageAdapter_bottomnav viewPageAdapter_bottomnav;
     BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -66,6 +67,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
 
     }
+
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction transaction=fragmentManager.beginTransaction();

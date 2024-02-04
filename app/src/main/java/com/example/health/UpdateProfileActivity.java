@@ -36,9 +36,10 @@ public class UpdateProfileActivity extends AppCompatActivity {
     private EditText editTextUpdateName,editTextupdateDob,editTextUpdatemobile;
     private RadioGroup radioGroupUpdategender;
     private RadioButton radioButtonUpdateGenderSelected;
-    private String textDob,textgender,textfullname,textmobile;
+    private String textDob,textgender,textfullname,textmobile,last_login;
     FirebaseAuth authProfile;
     private ProgressBar progressBar;
+    private int awesome,good,okay,bad,terrible;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,7 +135,7 @@ public class UpdateProfileActivity extends AppCompatActivity {
             textDob=editTextupdateDob.getText().toString();
             textmobile=editTextUpdatemobile.getText().toString();
             //enter user data into firebase realtime databse.
-            ReadWriteUserDetails writeUserDetails=new ReadWriteUserDetails(textfullname,textDob,textgender,textmobile);
+            ReadWriteUserDetails writeUserDetails=new ReadWriteUserDetails(textfullname,textDob,textgender,textmobile,last_login,awesome,good,okay,bad,terrible);
             //extract user refernce for db for registered user
             DatabaseReference referenceprofile=FirebaseDatabase.getInstance().getReference("Registered Users");
             String userId=firebaseUser.getUid();
@@ -185,6 +186,12 @@ public class UpdateProfileActivity extends AppCompatActivity {
                     editTextUpdateName.setText(textfullname);
                     editTextupdateDob.setText(textDob);
                     editTextUpdatemobile.setText(textmobile);
+                    last_login=readUserDetails.last_login;
+                    awesome=readUserDetails.awesome;
+                    good=readUserDetails.good;
+                    okay=readUserDetails.okay;
+                    bad=readUserDetails.bad;
+                    terrible=readUserDetails.terrible;
                     if(textgender.equals("Male")){
                         radioButtonUpdateGenderSelected=findViewById(R.id.radio_update_male);
 
