@@ -8,8 +8,10 @@ This app was developed using:
         PLATFORM-android studio
         Language-Java
 
+## Logo
 
-![image](https://github.com/pavis12/mindiser/assets/134910711/6dc944b3-3065-4d45-8009-2371988d516a)
+![mindiser-high-resolution-logo (6)](https://github.com/pavis12/mindiser/assets/134910711/2b12d6af-1edc-49d3-93c1-640da516857f)
+
 ## Screenshots
 The below are the Screenshots of the app I have developed.
 This is the login page/launcher page that have two options of either to sign up/login.
