@@ -14,6 +14,7 @@ This app was developed using:
 The below are the Screenshots of the app I have developed.
 This is the login page/launcher page that have two options of either to sign up/login.
 
-![image](https://github.com/pavis12/mindiser/assets/134910711/88562850-3ba6-4956-901a-5f15a00c8648)
+![Screenshot_20240224_111149 (1)](https://github.com/pavis12/mindiser/assets/134910711/d95532ee-492c-4107-8577-b370e64a6f67)
+
 
         
